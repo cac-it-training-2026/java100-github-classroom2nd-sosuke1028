@@ -23,7 +23,7 @@ public class Detective {
 
 	public static void main(String[] args) {
 
-		int gasolin = 10;
+		int gasolin = 9;
 
 		System.out.println("探偵：");
 		System.out.println("では早速出かけよう\n");

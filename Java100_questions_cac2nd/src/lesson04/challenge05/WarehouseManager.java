@@ -32,16 +32,31 @@ public class WarehouseManager {
 
 	public static void main(String[] args) {
 
-
 		//ここに配列の宣言を記述する
-
+		int[] intArray = new int[5];
 
 		int intputNum = 0;
 		boolean loopFlag = false;
 
-
 		//ここに重複チェックおよび値の代入処理を記述する
+		for (int i = 0; i < intArray.length; i++) {
+			do {
 
+				loopFlag = false;
+				intputNum = (int) (Math.random() * 10 % 5 + 1);
+				for (int j = 0; j < intArray.length; j++) {
+					if (intArray[j] == intputNum) {
+						loopFlag = true;
+						break;
+					}
+
+				}
+
+			} while (loopFlag);//loopflag = trueの間はループするという意味、つまりdoにもどって被らない値が出るまでループする。内側のfor文は今までの配列要素と被りがないか一個一個チェックするためのループ文
+
+			intArray[i] = intputNum;
+
+		}
 
 		System.out.println("E主任：");
 		System.out.println("AB興産の荷物の検査結果を教えてください。\n");
@@ -49,9 +64,14 @@ public class WarehouseManager {
 		System.out.println("Yさん：");
 		System.out.println("はい、");
 
-
 		//ここに要素の確認および何袋目かの出力処理を記述する
+		for (int j = 0; j < intArray.length; j++) {
+			if (intArray[j] == 5) {
+				System.out.println(j + 1 + "袋目");
 
+			}
+
+		}
 
 		System.out.println("に入っていました。");
 
