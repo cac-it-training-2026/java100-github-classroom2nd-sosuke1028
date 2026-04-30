@@ -47,7 +47,7 @@ class Robot {
 	String name;
 
 	public void randomWater() {
-		water = (int) ((Math.random() * 10) / 9 + 1);
+		water = (int) (Math.random() * 10) % 9 + 1;
 		System.out.println("水を" + water + "出しました。");
 
 	}
